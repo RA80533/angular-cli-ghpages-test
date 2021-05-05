@@ -33,6 +33,6 @@ jobs:
       with:
         name: dist-artifact
         path: dist
-    - run: npx ng deploy --no-build
+    - run: npx ng deploy --no-build --no-silent
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
