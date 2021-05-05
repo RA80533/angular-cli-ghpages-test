@@ -105,7 +105,9 @@
         },
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
-          "options": {}
+          "options": {
+            "baseHref": "/angular-cli-ghpages-test/"
+          }
         }
       }
     }
