@@ -28,11 +28,3 @@ jobs:
           ${{ runner.os }}-
     - run: npm ci
     - run: npm run build
-    - name: Archive production artifacts
-      uses: actions/upload-artifact@v2
-      with:
-        name: dist-artifact
-        path: dist
-    - run: npx ng deploy --no-build --no-silent
-      env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
